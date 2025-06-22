@@ -1,0 +1,238 @@
+/* 设置总体的body属性 */
+body {
+    background-color: whitesmoke;           /* 背景颜色 */
+    font-family: Georgia, "Times New Roman", Times, serif;              /* 字体 */
+    font-size: medium;              /* 字号 */
+    margin: 0;              /* 设置无外边框 */
+}
+
+.header {
+    background-color: white;
+    height: 80px;       /* 页眉区域高度 */
+    display: flex;         /* 使用弹性布局 */
+    align-items: center;        /* 水平居中 */
+    justify-content: space-between;     /* 两端对齐 */
+    padding: 0 20px;        /* 合适的内边距，优化视觉效果 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);      /* 添加阴影，使界面更美观 */
+    position: sticky;       /* 使页眉始终固定在界面顶端 */
+    top: 0;
+    z-index: 100;       /* 确保页眉和导航在所有内容之上 */
+    margin-bottom: 50px;    /* 设定下端外边框 */
+}
+
+.Logo {
+    width: 200px;
+    height: 80px;
+    margin-left: 100px;
+}
+
+.nav-links {
+    display: flex;      /* 弹性布局 */
+    list-style: none;       /* 删除默认列表样式 */
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    display: block;      /* 将链接转换为块级元素，增加点击区域 */
+    text-decoration: none;       /* 取消下划线 */
+    color: #333;
+    font-weight: bold;       /* 加粗文字 */
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;       /* 使有颜色过渡更加自然 */
+}
+
+.nav-links a:hover {
+    color: #0b3ad6; /* 主色调 */
+}
+
+/* 主体内容样式 */
+.main-content {
+    font-family: monospace;
+    max-width: 1200px;       /* 设置最大宽度限制 */
+    margin: 120px auto;
+    padding: 0 20px;
+    font-size: larger;       /* 设置更大的字体 */
+}
+        
+/* 个人资料卡片 */
+.profile-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);       /* 添加阴影，使之更加美观 */
+    overflow: hidden;            /* 确保子元素的圆角效果能生效 */
+    display: flex;
+    flex-wrap: wrap;         /* 允许换行显示 */
+}
+        
+/* 左侧照片区域 */
+.profile-photo {
+    flex: 1;         /* 弹性占据1份空间 */
+    min-width: 300px;
+    background-color: #1e40af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+        
+.profile-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;      /* 设置圆角效果 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+        
+/* 右侧信息区域 */
+.profile-info {
+    flex: 4;        /* 弹性占据4份空间 */
+    min-width: 300px;
+    padding: 40px;
+}
+        
+.profile-name {
+    font-size: 50px;
+    color: #1e40af;
+    margin-bottom: 50px;
+}
+        
+/* 个人信息列表 */
+.info-list {
+    list-style: none;       /* 取消列表的默认样式 */
+    margin-bottom: 30px;
+}
+        
+.info-item {
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+        
+.info-label {
+    font-weight: bold;
+    width: 120px;
+    color: #1e40af;
+}
+        
+.info-value {
+    color: #333;
+}
+        
+       
+        
+/* 页脚 */
+footer {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.course {
+    font-size: 30px;
+    color: #1e40af;
+    margin-bottom: 30px;
+}
+
+.course_1 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* 表格样式 */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* 小屏幕下允许横向滚动 */
+    margin-bottom: 30px;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;      /* 合并相邻的边框 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-table thead {
+    background-color: #1e40af;
+    color: white;
+}
+
+.profile-table th, 
+.profile-table td {     /* 设置单元格格式 */
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 设置表单性质 */
+.contact-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;     /* 块元素确保换行 */
+    font-weight: bold;      /* 加粗标签字体 */
+    margin-bottom: 8px;
+    color: #1e40af;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;     /* 设置圆角 */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;         /* 使状态变化更加平滑 */
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical; /* 允许垂直调整高度 */
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;      /*不使用浏览器的默认聚焦边框 */
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.2);
+}
+
+.form-input.focused, .form-textarea.focused {
+    border-color: #1e40af;
+}
+
+.form-submit {
+    background-color: #1e40af;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;        /* 此时使用手型的光标 */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-submit:hover {
+    background-color: #153185;
+    transform: translateY(-2px);        /* hover时轻微上移，增强交互感 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-submit:active {
+    transform: translateY(0);       /* 恢复位置 */
+}
